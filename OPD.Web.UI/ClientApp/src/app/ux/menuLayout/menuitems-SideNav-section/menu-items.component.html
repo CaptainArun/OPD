@@ -1,0 +1,58 @@
+  <div class="side-nav">
+<mat-list>
+  <ng-container *ngFor="let item of menu">
+
+    <ng-container *ngIf="item.subMenu === undefined">
+
+      <mat-list-item *ngIf="item.title" [routerLink]="item.link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" >   
+          <div class="menu-iconNav menu-iconNavSize" mat-list-icon [innerHTML]="item.icon"></div>
+          <div class="menu-iconTitle" mat-line *ngIf="valueShowTitle">{{ item.title }}</div>            
+      </mat-list-item>
+      
+    </ng-container>
+
+    
+    <ng-container *ngIf="item.subMenu">
+
+      <mat-expansion-panel  [expanded]="item.expanded">
+        
+        <mat-expansion-panel-header style="margin-top: 8px;">
+
+          <mat-panel-title class="d-flex align-items-center" [routerLinkActiveOptions]="{ exact: true }" [routerLink]="item.link" routerLinkActive="">
+
+            <div class="menu-iconNav menu-iconNavSize"  mat-list-icon [innerHTML]="item.icon"></div>
+
+            <div class="menu-iconTitle" mat-line class="expansionlist_item" *ngIf="valueShowTitle">{{ item.title }}</div>
+
+          </mat-panel-title>
+
+        </mat-expansion-panel-header>
+
+          <!-- 
+            <app-menuitem [menu]="item.subMenu"></app-menuitem> changed for design purpose
+           -->
+
+          <!-- New -->
+          <ng-container *ngFor="let item of item.subMenu">
+
+              <mat-list-item *ngIf="item.title && valueShowTitle" class="submenubgcls"  [routerLink]="item.link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" >   
+                  <div class="menu-iconNav menu-iconNavSize" mat-list-icon [innerHTML]="item.icon"></div>
+                  <div class="menu-iconTitle" mat-line *ngIf="valueShowTitle">{{ item.title }}</div>            
+              </mat-list-item>
+
+              <div *ngIf="item.title && !valueShowTitle" [ngClass]="valueShowTitle ? 'expansioncls' : 'expansioncls2' " [routerLink]="item.link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" >   
+                <div class="menu-iconNav menu-iconNavSize expansionIcon" [innerHTML]="item.icon"></div>
+                <div class="menu-iconTitle" mat-line  *ngIf="valueShowTitle">{{ item.title }}</div>            
+             </div>
+
+             <!-- **** -->
+          </ng-container>
+
+
+      </mat-expansion-panel>
+
+    </ng-container>
+
+  </ng-container>
+</mat-list> 
+</div>
