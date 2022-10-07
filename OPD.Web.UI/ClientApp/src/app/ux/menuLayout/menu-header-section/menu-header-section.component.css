@@ -1,0 +1,54 @@
+
+.gradient-bg {
+  background: rgba(87, 190, 188, 1);
+  background: -moz-linear-gradient(left, rgba(87, 190, 188, 1) 0%, rgba(89, 188, 190, 1) 44%, rgba(107, 181, 199, 1) 52%, rgba(122, 174, 206, 1) 60%, rgba(137, 167, 213, 1) 69%, rgba(158, 159, 223, 1) 85%, rgba(166, 157, 226, 1) 96%, rgba(166, 157, 226, 1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(87, 190, 188, 1)), color-stop(44%, rgba(89, 188, 190, 1)), color-stop(52%, rgba(107, 181, 199, 1)), color-stop(60%, rgba(122, 174, 206, 1)), color-stop(69%, rgba(137, 167, 213, 1)), color-stop(85%, rgba(158, 159, 223, 1)), color-stop(96%, rgba(166, 157, 226, 1)), color-stop(100%, rgba(166, 157, 226, 1)));
+  background: -webkit-linear-gradient(left, rgba(87, 190, 188, 1) 0%, rgba(89, 188, 190, 1) 44%, rgba(107, 181, 199, 1) 52%, rgba(122, 174, 206, 1) 60%, rgba(137, 167, 213, 1) 69%, rgba(158, 159, 223, 1) 85%, rgba(166, 157, 226, 1) 96%, rgba(166, 157, 226, 1) 100%);
+}
+
+.HeadermatBadge  {
+  padding-right: 20px;
+  padding-top: 5px;
+  font-size: 22px;
+
+}
+
+.Headicon_calendar{
+  padding-right: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.Headicon_time{
+  padding-right: 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.rxTime{
+  font-size: 15px;
+  padding: 10px;
+  font-weight: 500;
+}
+
+.sidebar_space {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.rainbow{
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 8% !important;
+  color: #000 !important;
+  padding-left: 30px!important;
+  padding-right: 30px!important;
+}
+
+.tetName {
+  font-size: 18px;
+  font-weight: 650;
+  margin-top: 4%;
+}
